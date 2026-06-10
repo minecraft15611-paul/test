@@ -10,6 +10,7 @@ api.interceptors.request.use((config) => {
     if (token) {
         config.headers.Authorization = `Bearer ${token}`
     }
+    config.headers.interviewerName = 'Paul Wang'
     return config
 })
 
