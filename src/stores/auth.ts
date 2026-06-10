@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useAuthStore = defineStore('auth', () => {
-    const token = ref<string | null>(null)
+    const token = ref<string | null>(localStorage.getItem('token'))
     const user = ref<string | null>(null)
 
     function setToken(newToken: string) {
